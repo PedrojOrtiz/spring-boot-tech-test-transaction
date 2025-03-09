@@ -2,6 +2,7 @@ package ec.sofka.springboottechtesttransaction.integration;
 
 import ec.sofka.springboottechtesttransaction.domain.Cuenta;
 import ec.sofka.springboottechtesttransaction.repository.CuentaRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,11 @@ class CuentaIntegrationTest {
                 .build();
         cuentaRepository.deleteByClienteId(cuenta.getClienteId());
         cuentaRepository.save(cuenta);
+    }
+
+    @AfterEach
+    void clean() {
+        cuentaRepository.deleteByClienteId(cuenta.getClienteId());
     }
 
     @Test

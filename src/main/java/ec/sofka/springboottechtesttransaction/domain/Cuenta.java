@@ -1,7 +1,6 @@
 package ec.sofka.springboottechtesttransaction.domain;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.*;

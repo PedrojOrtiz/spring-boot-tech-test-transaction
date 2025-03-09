@@ -18,7 +18,7 @@ public class MovimientoDTO {
 
     private String tipoCuenta;
 
-    private String saldoInicial;
+    private Double saldoInicial;
 
     private String tipoMovimiento;
 
